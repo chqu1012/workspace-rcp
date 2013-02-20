@@ -1,0 +1,50 @@
+<Composite xmlns="http://www.eclipse.org/xwt/presentation" xmlns:x="http://www.eclipse.org/xwt" x:Class="workspaceexample.xwt.NaviComposite" x:Name="createProjectButton">
+	<Composite.layout>
+		<GridLayout numColumns="3"/>
+	</Composite.layout>
+	<Label text="Count of Project">
+		<Label.layoutData>
+			<GridData horizontalAlignment="RIGHT"/>
+		</Label.layoutData>
+	</Label>
+	<Text x:Style="BORDER" x:Name="countOfProjectText">
+		<Text.layoutData>
+			<GridData grabExcessHorizontalSpace="true" horizontalAlignment="FILL"/>
+		</Text.layoutData>
+	</Text>
+	<Button text="Count of Projects" x:Name="countOfProjectsButton" SelectionEvent="onCountOfProjectsButtonSelection">
+		<Button.layoutData>
+			<GridData horizontalAlignment="FILL"/>
+		</Button.layoutData>
+	</Button>
+	<Label text="Projectname"/>
+	<Text x:Style="BORDER" x:Name="projectText" text="TEST">
+		<Text.layoutData>
+			<GridData grabExcessHorizontalSpace="true" horizontalAlignment="FILL"/>
+		</Text.layoutData>
+	</Text>
+	<Button text="Project create" x:Name="createProjectButton" SelectionEvent="onCreateProjectButtonSelection">
+		<Button.layoutData>
+			<GridData horizontalAlignment="FILL"/>
+		</Button.layoutData>
+	</Button>
+	<Label text="Foldername"/>
+	<Text x:Style="BORDER" x:Name="folderNameButton" text="TestFolder">
+		<Text.layoutData>
+			<GridData grabExcessHorizontalSpace="true" horizontalAlignment="FILL"/>
+		</Text.layoutData>
+	</Text>
+	<Button text="Create Folder in Project" x:Name="createFolderInProjectButton" SelectionEvent="onCreateFolderInProjectButtonSelection">
+		<Button.layoutData>
+			<GridData horizontalAlignment="FILL"/>
+		</Button.layoutData>
+	</Button>
+	<Label/>
+	<Label/>
+	<Button text="Open Workspace" x:Name="openWorkspaceButton" SelectionEvent="onOpenWorkspaceButtonSelection">
+		<Button.layoutData>
+			<GridData horizontalAlignment="FILL"/>
+		</Button.layoutData>
+	</Button>
+</Composite>
+<!-- Forms API -->
