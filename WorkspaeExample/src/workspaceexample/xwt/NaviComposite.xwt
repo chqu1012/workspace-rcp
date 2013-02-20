@@ -46,5 +46,21 @@
 			<GridData horizontalAlignment="FILL"/>
 		</Button.layoutData>
 	</Button>
+	<Label text="Link Resource"/>
+	<Text x:Style="BORDER" x:Name="linkResourceText">
+		<Text.layoutData>
+			<GridData grabExcessHorizontalSpace="true" horizontalAlignment="FILL"/>
+		</Text.layoutData>
+	</Text>
+	<Composite>
+		<Composite.layout>
+			<GridLayout numColumns="2" marginHeight="0" marginWidth="0"/>
+		</Composite.layout>
+		<Composite.layoutData>
+			<GridData horizontalAlignment="FILL"/>
+		</Composite.layoutData>
+		<Button text="Open Res" x:Name="openLinkResourceButton" SelectionEvent="onOpenLinkResourceButtonSelection"/>
+		<Button text="Link" x:Name="linkResourceButton" SelectionEvent="onLinkResourceButtonSelection"/>
+	</Composite>
 </Composite>
 <!-- Forms API -->

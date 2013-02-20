@@ -37,11 +37,12 @@
       <perspectiveExtension
             targetID="*">
          <view
-               standalone="true"
+               id="WorkspaeExample2.view"
                minimized="false"
-               relative="org.eclipse.ui.editorss"
                relationship="left"
-               id="WorkspaeExample2.view">
+               relative="org.eclipse.ui.editorss"
+               standalone="true"
+               visible="false">
          </view>
          <view
                id="workspaeexample2.NaviPart"
