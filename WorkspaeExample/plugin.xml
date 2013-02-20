@@ -50,6 +50,18 @@
                relationship="right"
                relative="WorkspaeExample2.view">
          </view>
+         <view
+               id="org.eclipse.ui.navigator.ProjectExplorer"
+               minimized="false"
+               relationship="right"
+               relative="workspaeexample2.NaviPart">
+         </view>
+         <view
+               id="org.eclipse.jdt.ui.ProjectsView"
+               minimized="false"
+               relationship="stack"
+               relative="org.eclipse.ui.navigator.ProjectExplorer">
+         </view>
       </perspectiveExtension>
    </extension>
    <extension
@@ -64,6 +76,57 @@
             </command>
          </menu>
       </menuContribution>
+   </extension>
+   <extension
+         id="sampleBuilder"
+         name="Sample Project Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="workspaeexample.builder.SampleBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="sampleNature"
+         name="Sample Project Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="workspaeexample.builder.SampleNature">
+         </run>
+      </runtime>
+      <builder
+            id="WorkspaeExample.sampleBuilder">
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="WorkspaeExample.contribution1"
+            nameFilter="*"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="workspaeexample.builder.ToggleNatureAction"
+               enablesFor="+"
+               id="WorkspaeExample.addRemoveNatureAction"
+               label="Add/Remove Sample Nature"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         id="xmlProblem"
+         name="XML Problem"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
    </extension>
 
 </plugin>

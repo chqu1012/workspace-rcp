@@ -12,7 +12,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.databinding.property;bundle-version="1.4.100",
  org.eclipse.emf.databinding;bundle-version="1.2.0",
  org.eclipse.jface.databinding;bundle-version="1.6.0",
- org.eclipse.ui.forms;bundle-version="3.5.200"
+ org.eclipse.ui.forms;bundle-version="3.5.200",
+ org.eclipse.ui.navigator;bundle-version="3.5.200",
+ org.eclipse.jdt.ui;bundle-version="3.8.1"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ClassPath: org.eclipse.e4.xwt_0.9.1.SNAPSHOT.jar,
